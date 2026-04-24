@@ -17,7 +17,10 @@ class Dmc < Formula
   end
 
   def install
-    prefix.install Dir["dmc/*"]
+    bundle = (buildpath/"dmc/bin/dmc").exist? ? buildpath/"dmc" : buildpath
+
+    bin.install bundle/"bin/dmc"
+    lib.install Dir["#{bundle}/lib/*"] if (bundle/"lib").directory?
   end
 
   test do
