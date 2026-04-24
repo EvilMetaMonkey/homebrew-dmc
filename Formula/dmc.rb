@@ -23,6 +23,21 @@ class Dmc < Formula
     lib.install Dir["#{bundle}/lib/*"] if (bundle/"lib").directory?
   end
 
+  def caveats
+    <<~EOS
+      macOS also ships a system command named `dmc` at /usr/bin/dmc.
+
+      If `dmc --version` prints disk profile commands instead of
+      "dmc version #{version}", refresh your shell command cache:
+
+        rehash
+
+      Then confirm Homebrew's dmc is first:
+
+        command -v dmc
+    EOS
+  end
+
   test do
     system bin/"dmc", "--version"
   end
