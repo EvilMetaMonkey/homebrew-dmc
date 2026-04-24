@@ -24,6 +24,6 @@ class Dmc < Formula
   end
 
   test do
-    system "#{bin}/dmc", "--version"
+    system bin/"dmc", "--version"
   end
 end
