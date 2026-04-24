@@ -5,13 +5,13 @@ class Dmc < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/EvilMetaMonkey/dmc/releases/download/v1.0.0/dmc-v1.0.0-macos-x86_64.tar.gz"
-    sha256 "PLACEHOLDER"
+    sha256 "deb3cd89f7b04fc625df6a6781b3ea3172f4f85501f3ea45fde6594975100641"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/EvilMetaMonkey/dmc/releases/download/v1.0.0/dmc-v1.0.0-macos-arm64.tar.gz"
-    sha256 "PLACEHOLDER"
+    sha256 "188ab192397234f103d9b95a64bcbbc1c2e65ed90fa8f6563d7e564e3e15a090"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/EvilMetaMonkey/dmc/releases/download/v1.0.0/dmc-v1.0.0-linux-x86_64.tar.gz"
-    sha256 "PLACEHOLDER"
+    sha256 "e222ab11e89750a5163a85f983e3605185afcebcc5e8e25a180a55d33cc2c953"
   else
     odie "Unsupported platform"
   end
